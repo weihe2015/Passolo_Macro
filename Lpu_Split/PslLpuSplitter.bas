@@ -49,7 +49,7 @@ Function ECI_th(prj)
 
 Dim Lang As String
 Dim trn As PslTransList
-Dim i,j,k As Integer
+Dim i,j As Integer
 Dim LangNum As Integer
 
 'Remove the language sets
@@ -107,19 +107,11 @@ For Each trn In prj.TransLists
 
 	End If
 
-	For k = 1 To trn.StringCount
+	If (trn.TransRate <> 100) Then
 
-		Dim tString As PslTransString
+		delete = False
 
-		Set tString = trn.String(k)
-
-		If tString.State(pslStateTranslated) = False And tString.State(pslStateReadOnly) = False Then
-
-			delete = False
-
-		End If
-
-	Next k
+	End If
 
 		If (delete = True) And (j = 1) Then
 
@@ -141,7 +133,7 @@ Function ECI(prj)
 
 Dim Lang As String
 Dim trn As PslTransList
-Dim i,j,k As Integer
+Dim i,j As Integer
 Dim LangNum As Integer
 
 'Remove the language sets
@@ -200,19 +192,11 @@ For Each trn In prj.TransLists
 
 	End If
 
-	For k = 1 To trn.StringCount
+	If (trn.TransRate <> 100) Then
 
-		Dim tString As PslTransString
+		delete = False
 
-		Set tString = trn.String(k)
-
-		If tString.State(pslStateTranslated) = False And tString.State(pslStateReadOnly) = False Then
-
-			delete = False
-
-		End If
-
-	Next k
+	End If
 
 		If (delete = True) And (j = 3) Then
 
@@ -235,7 +219,7 @@ Function AAC(prj)
 
 Dim Lang As String
 Dim trn As PslTransList
-Dim i,j,k As Integer
+Dim i,j As Integer
 Dim LangNum As Integer
 
 'Remove the language sets
@@ -294,19 +278,11 @@ For Each trn In prj.TransLists
 
 	End If
 
-	For k = 1 To trn.StringCount
+	If (trn.TransRate <> 100) Then
 
-		Dim tString As PslTransString
+		delete = False
 
-		Set tString = trn.String(k)
-
-		If tString.State(pslStateTranslated) = False And tString.State(pslStateReadOnly) = False Then
-
-			delete = False
-
-		End If
-
-	Next k
+	End If
 
 		If (delete = True) And (j = 6) Then
 
@@ -328,7 +304,7 @@ Function TOIN(prj)
 
 Dim Lang As String
 Dim trn As PslTransList
-Dim i,j,k As Integer
+Dim i,j As Integer
 Dim LangNum As Integer
 
 i = 0
@@ -381,19 +357,11 @@ For Each trn In prj.TransLists
 
 	End If
 
-	For k = 1 To trn.StringCount
+	If (trn.TransRate <> 100) Then
 
-		Dim tString As PslTransString
+		delete = False
 
-		Set tString = trn.String(k)
-
-		If tString.State(pslStateTranslated) = False And tString.State(pslStateReadOnly) = False Then
-
-			delete = False
-
-		End If
-
-	Next k
+	End If
 
 		If (delete = True) And (j = 2) Then
 
@@ -416,7 +384,7 @@ Function LION_Self(prj)
 
 Dim Lang As String
 Dim trn As PslTransList
-Dim i,j,k As Integer
+Dim i,j As Integer
 Dim LangNum As Integer
 
 i = 0
@@ -467,19 +435,11 @@ For Each trn In prj.TransLists
 
 	End If
 
-	For k = 1 To trn.StringCount
+	If (trn.TransRate <> 100) Then
 
-		Dim tString As PslTransString
+		delete = False
 
-		Set tString = trn.String(k)
-
-		If tString.State(pslStateTranslated) = False And tString.State(pslStateReadOnly) = False Then
-
-			delete = False
-
-		End If
-
-	Next k
+	End If
 
 		If (delete = True) And (j = 4) Then
 
@@ -502,7 +462,7 @@ Function LION_main(prj)
 
 Dim Lang As String
 Dim trn As PslTransList
-Dim i,j,k As Integer
+Dim i,j As Integer
 Dim LangNum As Integer
 
 i = 0
@@ -553,19 +513,11 @@ For Each trn In prj.TransLists
 
 	End If
 
-	For k = 1 To trn.StringCount
+	If (trn.TransRate <> 100) Then
 
-		Dim tString As PslTransString
+		delete = False
 
-		Set tString = trn.String(k)
-
-		If tString.State(pslStateTranslated) = False And tString.State(pslStateReadOnly) = False Then
-
-			delete = False
-
-		End If
-
-	Next k
+	End If
 
 		If (delete = True) And (j = 12) Then
 
